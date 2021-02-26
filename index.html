@@ -12,6 +12,7 @@
 			<topbar></topbar>
 			<router-view style="padding: 30px"></router-view>
 		</div>
+
 		<script src="https://unpkg.com/vuetable-2@next"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="https://unpkg.com/http-vue-loader"></script>
@@ -22,21 +23,22 @@
 
 			const Home = httpVueLoader('views/Home.vue');
 			const About = httpVueLoader('views/About.vue');
-			const Contact = httpVueLoader('views/Contact.vue');
+			const Table = httpVueLoader('views/Table.vue');
+
+			Vue.use(Vuetable);
 
 			const router = new VueRouter({
 				mode: 'history',
 				routes: [
 					{path: '/', name: 'home', component: Home},
 					{path: '/about', name: 'about', component: About},
-					{path: '/contact', name: 'contact', component: Contact},
+					{path: '/table', name: 'table', component: Table},
 				],
 			});
 
 			app = new Vue({
 				el: '#app',
 				router,
-				data: {},
 				components: {
 					topbar: httpVueLoader('components/topbar.vue'),
 				},

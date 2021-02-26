@@ -1,17 +1,9 @@
 <template>
-	<div>
-		<p>{{ msg }}</p>
-	</div>
+	<div>About section</div>
 </template>
 
 <script>
-module.exports = {
-	name: 'About',
-
-	data: function () {
-		return {
-			msg: 'About Section',
-		};
-	},
-};
+	module.exports = {
+		name: 'about',
+	};
 </script>

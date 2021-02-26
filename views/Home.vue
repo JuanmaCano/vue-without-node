@@ -3,10 +3,7 @@
 </template>
 
 <script>
-module.exports = {
-	name: 'home',
-	data: function () {
-		return {};
-	},
-};
+	module.exports = {
+		name: 'home',
+	};
 </script>
